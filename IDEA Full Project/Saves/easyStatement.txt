@@ -1,0 +1,1 @@
+algS int a 12 if op a > 12 then op a + 4 else op a - 4 wr a algE 

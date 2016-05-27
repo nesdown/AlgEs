@@ -1,0 +1,4 @@
+algS 
+	str var 'Hello_world!'
+	wr var
+algE 

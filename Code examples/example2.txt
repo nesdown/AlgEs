@@ -1,0 +1,10 @@
+algS
+	int a 13
+
+	if op a > 12 then 
+		op a * 5 
+	else 
+		op a - 2 
+
+	wr a
+algE

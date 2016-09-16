@@ -12,7 +12,7 @@ There are some examples of AlgEs programming language in "Code examples" folder.
 - Linux distributives: Ubuntu, Debian, Elementary OS etc.
 
 #Instructions
-You can find a tutorial in the "tutorials" folder. 
+You can find the tutorial in "tutorials" folder. 
 
 
 

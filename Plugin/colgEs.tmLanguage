@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plist version="1.0">
+    <dict>
+        <key>patterns</key>
+        <array>
+            <dict>
+                <key>name</key>
+                <string>green</string> 
+                <key>match</key>
+                <string>algS</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>green</string> 
+                <key>match</key>
+                <string>algE</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>violet</string> 
+                <key>match</key>
+                <string>int</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>violet</string> 
+                <key>match</key>
+                <string>str</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>violet</string> 
+                <key>match</key>
+                <string>bool</string>  
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>blue</string> 
+                <key>match</key>
+                <string>if</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>blue</string> 
+                <key>match</key>
+                <string>else</string>  
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>blue</string> 
+                <key>match</key>
+                <string>then</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>orange</string> 
+                <key>match</key>
+                <string>op</string> 
+            </dict>
+
+            <dict>
+                <key>name</key>
+                <string>blue</string> 
+                <key>match</key>
+                <string>wr</string> 
+            </dict>
+
+        </array>
+        <key>name</key>
+        <string>colgEs</string> 
+        <key>scopeName</key>
+        <string>colgEs</string>
+        <key>fileTypes</key>
+        <array>
+            <string>txt</string> 
+        </array>
+    </dict>
+</plist>

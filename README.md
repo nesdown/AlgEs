@@ -12,7 +12,10 @@ There are some examples of AlgEs programming language in "Code examples" folder.
 - Linux distributives: Ubuntu, Debian, Elementary OS etc.
 
 #Instructions
-You can find the tutorial in "tutorials" folder. 
+You can find the tutorial in "Tutorials" folder. 
+
+#Install Plugin
+You can use special plugin for SublimeText which highlights ColgEs code. Just copy files from Plugin folder into SublimeText directory on your computer. 
 
 
 

@@ -1,0 +1,21 @@
+{
+  "name": "alges",
+  "version": "2.0.0-alpha.1",
+  "private": true,
+  "description": "Learn algorithms five ways: watch, predict, do, race and build. With ColgEs, a tiny language that draws your program as a flowchart.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bohdan Hlushko",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

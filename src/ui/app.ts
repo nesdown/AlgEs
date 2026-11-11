@@ -733,10 +733,15 @@ document.addEventListener('keydown', (e) => {
 export function start() {
   // Lets automated checks drive the app: open with ?debug.
   if (location.search.includes('debug')) Object.assign(window, { alges: { S, answer, currentAsk, setMode, chooseAlgorithm, setPlaying, continueAfterFeedback, render } });
-  const hash = location.hash.slice(1);
-  if (ALGORITHMS.some((a) => a.id === hash)) S.algo = byId(hash);
+  // Links can name a mode, an algorithm, or both: #race, #astar, #race.astar.
+  const tokens = location.hash.slice(1).split('.');
+  const algoToken = tokens.find((t) => ALGORITHMS.some((a) => a.id === t));
+  const modeToken = tokens.find((t) => MODES.some((m) => m.id === t)) as Mode | undefined;
+  if (algoToken) S.algo = byId(algoToken);
+  const [a, b] = RIVALS[S.algo.family];
+  S.rival = S.algo.id === b ? a : b;
   if (S.algo.family === 'searching') newTarget();
-  if (MODES.some((m) => m.id === hash)) setMode(hash as Mode);
+  if (modeToken) setMode(modeToken);
   else {
     rebuild();
     render(true);

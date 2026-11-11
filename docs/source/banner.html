@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>AlgEs banner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Golos+Text:wght@400;500&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  :root { --board: #22392f; --deep: #172a22; --chalk: #eef1e6; --dim: #b2c2b6; --faint: #73897c; --yellow: #f3d77a; --pink: #f3a5b8; --blue: #9fd6ee; --green: #a9e3a2; --orange: #f4b37a; }
+  html, body { margin: 0; width: 1280px; height: 560px; overflow: hidden; }
+  body {
+    position: relative;
+    background-color: var(--board);
+    background-image:
+      radial-gradient(ellipse 55% 60% at 22% 30%, rgba(238,241,230,.09), transparent 70%),
+      radial-gradient(ellipse 40% 50% at 78% 62%, rgba(238,241,230,.06), transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    color: var(--chalk);
+    font-family: "Golos Text", sans-serif;
+    box-shadow: inset 0 0 0 14px #5c3e26, inset 0 0 0 17px #3f2a19, inset 0 0 80px rgba(0,0,0,.35);
+  }
+  .chalk { filter: url(#rough); }
+  .title { position: absolute; left: 76px; top: 92px; font: 800 168px/0.9 "Unbounded", sans-serif; letter-spacing: -0.03em; color: rgba(238,241,230,.94); text-shadow: 0 0 2px rgba(238,241,230,.5); }
+  .swoosh { position: absolute; left: 82px; top: 262px; }
+  .tag { position: absolute; left: 82px; top: 300px; font: 500 35px/1.2 "Golos Text", sans-serif; color: var(--chalk); }
+  .sub { position: absolute; left: 82px; top: 352px; font: 400 21px/1.4 "Golos Text", sans-serif; color: var(--dim); width: 560px; }
+  .modes { position: absolute; left: 82px; top: 440px; display: flex; gap: 10px; }
+  .modes span { font: 500 17px "Unbounded", sans-serif; padding: 8px 15px 9px; border: 2px solid rgba(238,241,230,.55); border-radius: 12px 9px 13px 8px; color: var(--chalk); }
+  .modes span:nth-child(1) { border-color: var(--yellow); color: var(--yellow); }
+  .note { position: absolute; left: 84px; top: 58px; font: 500 14px "JetBrains Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
+  .art { position: absolute; right: 56px; top: 110px; overflow: visible; }
+  .tray { position: absolute; left: 0; right: 0; bottom: 0; height: 30px; background: linear-gradient(180deg, #7b5636 0, #6c4a2e 7px, #4a3220 100%); box-shadow: 0 -3px 6px rgba(0,0,0,.3); }
+  .stick { position: absolute; bottom: 26px; height: 9px; border-radius: 4px; box-shadow: inset 0 -2px 0 rgba(0,0,0,.15); }
+</style>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+    </filter>
+  </svg>
+
+  <div class="note chalk">Kyiv 2016 &middot; redrawn 2026</div>
+  <div class="title chalk">AlgEs</div>
+  <svg class="swoosh chalk" width="470" height="26" viewBox="0 0 470 26"><path d="M4 18 C 120 6, 300 4, 466 12" stroke="#f3d77a" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/></svg>
+  <div class="tag chalk">Learn an algorithm five ways.</div>
+  <div class="sub">Sorting, searching and pathfinding on a chalkboard, and a tiny language that draws your code.</div>
+  <div class="modes chalk"><span>Watch</span><span>Predict</span><span>Do</span><span>Race</span><span>Build</span></div>
+
+  <svg class="art chalk" width="560" height="400" viewBox="0 0 560 400" font-family="JetBrains Mono, monospace">
+    <!-- bars mid-sort: the two compared ones are pink, the sorted tail blue -->
+    <g id="bars"><rect x="6" y="303.6" width="30" height="88.4" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="49" y="241.2" width="30" height="150.8" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="92" y="334.8" width="30" height="57.2" rx="3" fill="#f3a5b8" opacity="0.95"/><rect x="135" y="207.4" width="30" height="184.6" rx="3" fill="#f3a5b8" opacity="0.95"/><rect x="178" y="272.4" width="30" height="119.6" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="221" y="228.2" width="30" height="163.8" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="264" y="163.2" width="30" height="228.8" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="307" y="316.6" width="30" height="75.4" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="350" y="256.8" width="30" height="135.2" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="393" y="184.0" width="30" height="208.0" rx="3" fill="#eef1e6" opacity="0.82"/><rect x="436" y="155.4" width="30" height="236.6" rx="3" fill="#9fd6ee" opacity="0.82"/><rect x="479" y="139.8" width="30" height="252.2" rx="3" fill="#9fd6ee" opacity="0.82"/></g>
+    <!-- the question a learner is asked -->
+    <path d="M 107.0 183.4 C 119.0 137.4, 138.0 137.4, 150.0 183.4" stroke="#f3a5b8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M 142.0 171.4 L 150.0 185.4 L 157.0 170.4" stroke="#f3a5b8" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="128.5" y="139.4" fill="#f3a5b8" font-size="20" font-weight="500" text-anchor="middle">swap?</text>
+    <!-- a corner of a flowchart -->
+    <g transform="translate(410 -66)" stroke-width="3" fill="none">
+      <rect x="18" y="0" width="112" height="34" rx="17" stroke="#a9e3a2"/>
+      <text x="74" y="22" fill="#eef1e6" stroke="none" font-size="13" text-anchor="middle">Begin</text>
+      <path d="M 74 34 V 54" stroke="#b2c2b6"/>
+      <polygon points="74,54 142,86 74,118 6,86" stroke="#f3d77a"/>
+      <text x="74" y="91" fill="#eef1e6" stroke="none" font-size="13" text-anchor="middle">n &gt; 0 ?</text>
+      <path d="M 74 118 V 142" stroke="#b2c2b6"/>
+      <text x="82" y="136" fill="#73897c" stroke="none" font-size="11">yes</text>
+      <polygon points="18,142 130,142 118,174 6,174" stroke="#9fd6ee"/>
+      <text x="68" y="163" fill="#eef1e6" stroke="none" font-size="13" text-anchor="middle">print n</text>
+    </g>
+  </svg>
+  <div class="tray"></div>
+  <div class="stick" style="left: 760px; width: 64px; background: #eef1e6; transform: rotate(-3deg)"></div>
+  <div class="stick" style="left: 842px; width: 40px; background: #f3d77a; transform: rotate(4deg)"></div>
+  <div class="stick" style="left: 1100px; width: 52px; background: #f3a5b8; transform: rotate(-2deg)"></div>
+</body>
+</html>
